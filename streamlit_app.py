@@ -8,5 +8,4 @@ f3=st.number_input('f3',min_value=1,max_value=100)
 
 with open('model.pkl','rb') as file :
   pickle.load(file)
-
 model.predict
