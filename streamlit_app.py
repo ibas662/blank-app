@@ -5,7 +5,7 @@ import pickle
 import numpy as np
 
 # Load your model
-with open('model.pkl', 'rb') as model_file:
+with open('model2.pkl', 'rb') as model_file:
     model = pickle.load(model_file)
 
 def predict(features):
@@ -19,10 +19,11 @@ st.title('Model Prediction App')
 st.sidebar.header('User Input')
 
 def get_user_input():
-    feature1 = st.sidebar.slider('Feature 1', min_value=0, max_value=100, value=50)
+    feature1 = st.sidebar.slider('Feature 1', min_value=0, max_value=200, value=50)
     feature2 = st.sidebar.slider('Feature 2', min_value=0, max_value=100, value=50)
     feature3 = st.sidebar.slider('Feature 3', min_value=0, max_value=100, value=50)
-    return np.array([feature1, feature2, feature3])
+    feature4 = st.sidebar.slider('Feature 4', min_value=0, max_value=10, value=50)
+    return np.array([feature1, feature2, feature3, feature4])
 
 user_input = get_user_input()
 
