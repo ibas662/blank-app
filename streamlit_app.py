@@ -5,7 +5,7 @@ import pickle
 import numpy as np
 
 # Load your model
-with open('model (1).pkl', 'rb') as model_file:
+with open('model3.pkl', 'rb') as model_file:
     model = pickle.load(model_file)
 
 def predict(features):
